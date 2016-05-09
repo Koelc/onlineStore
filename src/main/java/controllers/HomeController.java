@@ -46,8 +46,8 @@ public class HomeController {
     }
      
     //For add and update person both
-    @RequestMapping(value= "/product/add", method = RequestMethod.POST)
-    public String addPerson(@ModelAttribute("product") Product p){
+    @RequestMapping(value= "/productTable/add", method = RequestMethod.POST)
+    public String addProduct(@ModelAttribute("product") Product p){
          
         if(p.getId() == 0){
             //new person, add it
