@@ -37,8 +37,49 @@ public class HomeController {
     {
     	return "index";
     }
+    
+    @RequestMapping("/registration")
+    public String showReg()
+    {
+    	return "registration";
+    }
      
-    @RequestMapping(value = "/productTable", method = RequestMethod.GET)
+    
+    /*@RequestMapping(value="/customer" ,method = RequestMethod.GET )
+    public String listProduct(Model model) {
+    	
+    	model.addAttribute("product", new Product());
+        model.addAttribute("listProduct", this.productService.listProduct());
+    	return "productTableUser";
+    }
+    */
+    
+    @RequestMapping("/productTableUser")
+    public ModelAndView prodTable()
+	{
+		//DAOlist dil=new DAOlist();
+		ModelAndView mav = new ModelAndView("productTableUser");
+		mav.addObject("listProduct", this.productService.listProduct());
+		return mav;
+		
+		
+		
+  }
+    
+    @RequestMapping("/index")
+    public String showHome()
+    {
+    	return "index";
+    }
+     
+    @RequestMapping("/signin")
+	public String signin()
+	{
+		return "signin";
+	}
+
+    
+    @RequestMapping(value = "/perform_login", method = RequestMethod.POST)
     public String listProducts(Model model) {
         model.addAttribute("product", new Product());
         model.addAttribute("listProduct", this.productService.listProduct());
@@ -75,5 +116,13 @@ public class HomeController {
         model.addAttribute("listProduct", this.productService.listProduct());
         return "productTable";
     }
+    
+   /* @RequestMapping(value = "/productTable", method = RequestMethod.GET)
+	public String privatePage()
+	{
+		return "productTable";
+	}*/
+	
+	
      
 }
