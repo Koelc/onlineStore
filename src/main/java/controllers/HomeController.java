@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-//import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -45,7 +45,7 @@ public class HomeController {
     }
      
     
-    /*@RequestMapping(value="/customer" ,method = RequestMethod.GET )
+    /*@RequestMapping(value="/customer" ,method = RequestMethod.POST )
     public String listProduct(Model model) {
     	
     	model.addAttribute("product", new Product());
@@ -78,13 +78,13 @@ public class HomeController {
 		return "signin";
 	}
 
-    
-    @RequestMapping(value = "/perform_login", method = RequestMethod.POST)
+    @RequestMapping(value = "/productTable", method=RequestMethod.GET )
     public String listProducts(Model model) {
         model.addAttribute("product", new Product());
         model.addAttribute("listProduct", this.productService.listProduct());
         return "productTable";
     }
+   
      
     //For add and update person both
     @RequestMapping(value= "/productTable/add", method = RequestMethod.POST)
@@ -117,7 +117,7 @@ public class HomeController {
         return "productTable";
     }
     
-   /* @RequestMapping(value = "/productTable", method = RequestMethod.GET)
+   /* @RequestMapping(value = "/productTable", method = RequestMethod.POST)
 	public String privatePage()
 	{
 		return "productTable";

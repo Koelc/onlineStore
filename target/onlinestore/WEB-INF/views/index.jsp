@@ -44,16 +44,16 @@ transform:scale(1.5);
   		<li class = "dropdown">
   		<a href="#" class = "dropdown-toggle" data-toggle= "dropdown">Sign In <span class="caret"></span></a>
   		<ul class="dropdown-menu">
-      			<li><a href="customer">Customer</a></li>
-     			<li><a href="productTable">Admin</a></li>
+      			<li><a href="registration">Customer</a></li>
+     			<li><a href="signin">Admin</a></li>
       			</ul>
       			</li>
       			<li class = "dropdown">
    				<a href="#" class = "dropdown-toggle" data-toggle= "dropdown">Products <span class="caret"></span></a>
    				<ul class="dropdown-menu">
-      			<li><a href="productTable">Pizza</a></li>
-     			<li><a href="productTable">Side Orders</a></li>
-    			<li><a href="productTable">Desserts</a></li>
+      			<li><a href="productTableUser">Pizza</a></li>
+     			<li><a href="productTableUser">Side Orders</a></li>
+    			<li><a href="productTableUser">Desserts</a></li>
       			</ul>
       	 </li>
   </ul> 
