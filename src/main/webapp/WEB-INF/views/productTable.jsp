@@ -156,8 +156,11 @@ $(document).ready(function(){
         File to upload: <input type="file" name="file"><br /> 
       <!--   Name: <input type="text" name="name"> --><br /> <br /> 
         <input type="submit" value="Upload"> Press here to upload the file!
+<<<<<<< HEAD
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
         
+=======
+>>>>>>> origin/master
     </form>
     </div>
  <nav class="navbar navbar-inverse navbar-fixed-bottom">
