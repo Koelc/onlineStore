@@ -17,8 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import dao.customerServices;
 import dao.productServices;
 import models.Product;
+import models.customer;
 
 //import dao.servicesImpl;
 
@@ -27,7 +29,8 @@ public class HomeController {
 	  
     @Autowired
   public productServices productService;
-   
+    @Autowired
+  public customerServices customerService; 
    /* @Qualifier(value="productService")
     public void setPersonService(productServices ps){
         this.productService = ps;
@@ -38,12 +41,34 @@ public class HomeController {
     	return "index";
     }
     
+    
     @RequestMapping("/registration")
-    public String showReg()
+    public String showReg(Model model)
     {
+    	model.addAttribute("customer", new customer());
     	return "registration";
     }
+    
+    //Customer data insert
+    @RequestMapping(value= "/addCustomer", method = RequestMethod.POST)
+    public String addCustomer(@ModelAttribute("customer") customer c)
+    {
+    	
+            //new person, add it
+            this.customerService.addPerson(c);
+        
+    	return "redirect:/index";
+    }
      
+    @RequestMapping(value = "/submit", method = RequestMethod.POST)
+    public ModelAndView customerTable()
+    
+    {
+        ModelAndView mv = new ModelAndView("custTable");
+        mv.addObject("listcust",this.customerService.listcust());
+        return mv;
+    }
+    
     
     /*@RequestMapping(value="/customer" ,method = RequestMethod.POST )
     public String listProduct(Model model) {
