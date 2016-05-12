@@ -18,7 +18,7 @@
 </head>
 <body>
      
-     <nav class="navbar navbar-default">
+     <nav class="navbar navbar-inverse">
 <div class = "container-fluid">
 <div class="navbar-header">
 <img src = "C:\Users\koel.chowdhury\DT TTT\Images\logos.png" class="img-responsive" alt="No image" width="104" height="136">
@@ -149,6 +149,17 @@ $(document).ready(function(){
     $('#product').dataTable();
 });
 </script>
+
+<div class = "container">
+
+    <form method="POST" action="uploadFile" enctype="multipart/form-data">
+        File to upload: <input type="file" name="file"><br /> 
+      <!--   Name: <input type="text" name="name"> --><br /> <br /> 
+        <input type="submit" value="Upload"> Press here to upload the file!
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+        
+    </form>
+    </div>
  <nav class="navbar navbar-inverse navbar-fixed-bottom">
 
 <h5><b><font color = "White">About</font> </b><span class="label label-default">Spreading cheesyness for decades</span></h5>

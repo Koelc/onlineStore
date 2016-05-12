@@ -44,7 +44,7 @@ transform:scale(1.5);
   		<li class = "dropdown">
   		<a href="#" class = "dropdown-toggle" data-toggle= "dropdown">Sign In <span class="caret"></span></a>
   		<ul class="dropdown-menu">
-      			<li><a href="registration">Customer</a></li>
+      			<li><a href="signin">Customer</a></li>
      			<li><a href="signin">Admin</a></li>
       			</ul>
       			</li>

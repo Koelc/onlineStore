@@ -1,8 +1,40 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>About Us | Koel's Pizza</title>
+ 
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!--  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
 
-<HTML>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">  </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.1/css/font-awesome.min.css"></script>
+<header id="header">
+<div class="top-bar">
+<nav class="navbar navbar-inverse" role="banner">
+<div class="container">
+<div class="row">
+<div class="col-sm-6 col-xs-4">
+<div class="top-number"><p class="text-muted"><i class="fa fa-phone-square"></i> +9123 456 78 90</p></div>
+</div>
 
-<body>
+</div>
+<img src = "C:\Users\koel.chowdhury\DT TTT\Images\logos.png" class="img-responsive" alt="No image" width="104" height="136">
+</div>
+</nav>
+<li> <a href="index">Home</a></li>
+</div>
+</header>
+
 <h1>Admin LogIn </h1>
 
 <div id="login-box">

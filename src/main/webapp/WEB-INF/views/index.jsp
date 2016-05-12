@@ -1,7 +1,18 @@
 <!DOCTYPE HTML >
 <HTML lang="en">
 <HEAD>
-<META name = "viewpoint" content = "width-device-width, intial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>About Us | Koel's Pizza</title>
+ 
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <!--  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
@@ -30,13 +41,19 @@ transform:scale(1.5);
 <br>
 <br>
 <body>
-<nav class="navbar navbar-default">
-<div class = "container-fluid">
-<div class="navbar-header">
+<header id="header">
+<div class="top-bar">
+<nav class="navbar navbar-inverse" role="banner">
+<div class="container">
+<div class="row">
+<div class="col-sm-6 col-xs-4">
+<div class="top-number"><p class="text-muted"><i class="fa fa-phone-square"></i> +9123 456 78 90</p></div>
+</div>
 <img src = "C:\Users\koel.chowdhury\DT TTT\Images\logos.png" class="img-responsive" alt="No image" width="104" height="136">
 
 </div>
   <div>
+  
   <ul class="nav navbar-nav">
      	
   		<li> <a href="registration">Register</a></li>
@@ -44,7 +61,7 @@ transform:scale(1.5);
   		<li class = "dropdown">
   		<a href="#" class = "dropdown-toggle" data-toggle= "dropdown">Sign In <span class="caret"></span></a>
   		<ul class="dropdown-menu">
-      			<li><a href="registration">Customer</a></li>
+      			<li><a href="signin">Customer</a></li>
      			<li><a href="signin">Admin</a></li>
       			</ul>
       			</li>
@@ -61,6 +78,8 @@ transform:scale(1.5);
 </div>
 </div>
 </nav>
+</div>
+</header>
 <div class = "container">
 <div class = "row">
 <div class = "span12">
@@ -71,6 +90,7 @@ transform:scale(1.5);
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1" ></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
    </ol>
 
   <!-- Wrapper for slides -->
@@ -78,7 +98,13 @@ transform:scale(1.5);
   <div class="carousel-inner"  role= "listbox">
     <div class="item active">
 
-      <img src="C:/Users/koel.chowdhury/DT TTT/Images/pizza.png" alt="pizza" class="img-responsive">
+      <img src="C:/Users/koel.chowdhury/DT TTT/Images/c_pizza_1.png" alt="pizza" class="img-responsive">
+    </div>
+    
+    
+    <div class="item">
+
+      <img src="C:/Users/koel.chowdhury/DT TTT/Images/c_pizza_2.png" alt="pizza" class="img-responsive">
     </div>
 
     <div class="item">
@@ -120,13 +146,13 @@ cycle:true
 <div class="container">
   <div class="row">
 <div class = "col-lg-4">
-<img src="C:\Users\koel.chowdhury\DT TTT\Images\pizza.png"  height = "300" width = "300" alt="pizza" class="img-responsive">
+<img src="C:\Users\koel.chowdhury\DT TTT\Images\c_pizza_3.png"  height = "200" width = "200" alt="pizza" class="img-responsive">
 </div>
 <div class = "col-lg-4">
-<img src="C:\Users\koel.chowdhury\DT TTT\Images\chicken_wings.png"   height = "300" width = "300" alt="Chicken" class="img-responsive">
+<img src="C:\Users\koel.chowdhury\DT TTT\Images\chicken_wings.png"   height = "200" width = "200" alt="Chicken" class="img-responsive">
 </div>
 <div class = "col-lg-4">
-<img src="C:\Users\koel.chowdhury\DT TTT\Images\choco.png"   height = "300" width = "300" alt="choco" class="img-responsive">
+<img src="C:\Users\koel.chowdhury\DT TTT\Images\choco.png"   height = "200" width = "200" alt="choco" class="img-responsive">
 </div>
 
 </div>
@@ -141,16 +167,17 @@ cycle:true
 <nav class="navbar navbar-inverse navbar-fixed-bottom">
 
 <h5><b><font color = "White">About</font> </b><span class="label label-default">Spreading cheesyness for decades</span></h5>
-<div class = "container">
+<div class="social">
+<ul class="social-share">
+<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+<li><a href="#"><i class="fa fa-skype"></i></a></li>
+</ul>
 
-<div class = "navbar-text pull-right"> 
-
-<a href ="https://www.facebook.com" ><i class="fa fa-facebook fa-4x" ></i></a>
-<a href ="https://www.facebook.com" ><i class="fa fa-twitter fa-4x" ></i></a>
-<a href ="https://www.facebook.com" ><i class="fa fa-github fa-4x" ></i></a>
+</form>
 </div>
 </div>
-
 </nav>
 
 </BODY>

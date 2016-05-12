@@ -16,19 +16,18 @@
 </head>
 <body>
       
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-inverse">
 <div class = "container-fluid">
 <div class="navbar-header">
 <img src = "C:\Users\koel.chowdhury\DT TTT\Images\logos.png" class="img-responsive" alt="No image" width="104" height="136">
 
 </div>
   <div>
-  <ul class="nav navbar-nav">
+ 
      	
-  		<li> <a href="index">Home</a></li>
-  			</ul>
-      	 </li>
-  </ul> 
+  		<p> <a href="index">Home</a></li>
+  			
+  
     
 </div>
 </div>
