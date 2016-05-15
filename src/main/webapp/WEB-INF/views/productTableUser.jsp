@@ -37,7 +37,11 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
   <div>
  
      	
+<<<<<<< HEAD
   		<p> <a href="index"><span class="glyphicon glyphicon-home">Home</span></a></li>
+=======
+  		<p> <a href="index">Home</a></li>
+>>>>>>> origin/master
   			
   
     

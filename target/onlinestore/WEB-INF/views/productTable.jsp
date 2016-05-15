@@ -148,7 +148,18 @@ $(document).ready(function(){
 });
 </script>
 
+<<<<<<< HEAD
 
+=======
+<div class = "container">
+
+    <form method="POST" action="uploadFile" enctype="multipart/form-data">
+        File to upload: <input type="file" name="file"><br /> 
+      <!--   Name: <input type="text" name="name"> --><br /> <br /> 
+        <input type="submit" value="Upload"> Press here to upload the file!
+    </form>
+    </div>
+>>>>>>> origin/master
  <nav class="navbar navbar-inverse navbar-fixed-bottom">
 
 <h5><b><font color = "White">About</font> </b><span class="label label-default">Spreading cheesyness for decades</span></h5>
