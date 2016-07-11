@@ -2,9 +2,17 @@ C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\controllers\HomeCon
 C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\dao\customerDAOImpl.java
 C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\dao\customerServices.java
 C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\dao\productDAOImpl.java
+<<<<<<< HEAD
 C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\dao\StudentServices.java
 C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\models\Product.java
 C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\models\Student.java
 C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\models\customer.java
 C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\dao\StudentDAOImpl.java
 C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\dao\productServices.java
+=======
+C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\models\Product.java
+C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\validator\FileUploadValidator.java
+C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\models\customer.java
+C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\dao\productServices.java
+C:\Users\koel.chowdhury\DT-Project\onlinestore\src\main\java\models\FileUpload.java
+>>>>>>> origin/master

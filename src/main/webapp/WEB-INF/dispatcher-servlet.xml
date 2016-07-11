@@ -34,14 +34,26 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd
                                 </property>
                 </bean>
               
+<<<<<<< HEAD
               <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+=======
+              <bean id="multipartResolver"
+    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+>>>>>>> origin/master
 
     <!-- one of the properties available; the maximum file size in bytes -->
     <property name="maxUploadSize" value="100000"/>
 
     </bean>
  
+<<<<<<< HEAD
                <bean id="studentDAO" class="dao.StudentServices" />
+=======
+              
+                
+              <!-- 
+               <bean id="di" class="dao.productServices" />
+>>>>>>> origin/master
                
               <bean id="ss" class="dao.StudentDAOImpl" /> 
 </beans>

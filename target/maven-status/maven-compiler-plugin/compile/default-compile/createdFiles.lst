@@ -7,4 +7,9 @@ dao\StudentDAOImpl.class
 dao\productServices.class
 dao\customerDAOImpl.class
 dao\customerServices.class
+<<<<<<< HEAD
+=======
+models\FileUpload.class
+validator\FileUploadValidator.class
+>>>>>>> origin/master
 models\customer.class

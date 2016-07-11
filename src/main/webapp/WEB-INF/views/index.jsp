@@ -57,7 +57,17 @@ transform:scale(1.5);
 <div class="container">
 <div class="row">
 <div class="col-sm-6 col-xs-4">
+<<<<<<< HEAD
 <div class="top-number"><p class="text-primary"><span class="glyphicon glyphicon-earphone"></span><i class="fa fa-phone-square"></i> +9123 456 78 90</p></div>
+=======
+<<<<<<< HEAD
+<div class="top-number"><p class="text-primary"><span class="glyphicon glyphicon-earphone"></span><i class="fa fa-phone-square"></i> +9123 456 78 90</p></div>
+=======
+<div class="top-number"><p class="text-muted"><i class="fa fa-phone-square"></i> +9123 456 78 90</p></div>
+</div>
+<img src = "C:\Users\koel.chowdhury\DT TTT\Images\logos.png" class="img-responsive" alt="No image" width="104" height="136">
+>>>>>>> origin/master
+>>>>>>> origin/master
 
 <img src = "C:\Users\koel.chowdhury\DT TTT\Images\logos.png" class="img-responsive" alt="No image" width="104" height="136">
 </div>
@@ -186,8 +196,15 @@ cycle:true
 <li><a href="#"><i class="fa fa-skype"></i></a></li>
 </ul>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+</form>
 </div>
-
+>>>>>>> origin/master
+>>>>>>> origin/master
+</div>
 </nav>
 
 </BODY>

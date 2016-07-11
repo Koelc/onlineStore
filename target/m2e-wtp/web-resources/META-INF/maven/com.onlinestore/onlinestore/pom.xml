@@ -9,21 +9,6 @@
   <url>http://maven.apache.org</url>
   <dependencies>
   
-<<<<<<< HEAD
-  
-  <!-- ===================Json and Gson============= -->
-  <dependency>
-    <groupId>org.json</groupId>
-    <artifactId>json</artifactId>
-    <version>20090211</version>
-</dependency>
-		<dependency>
-    <groupId>com.google.code.gson</groupId>
-    <artifactId>gson</artifactId>
-    <version>2.2.4</version>
-</dependency>
-=======
->>>>>>> origin/master
 
    <!--  ==============  Spring security        =======-->
     
