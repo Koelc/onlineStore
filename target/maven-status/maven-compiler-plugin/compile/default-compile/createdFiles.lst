@@ -1,4 +1,10 @@
 controllers\HomeController.class
+dao\StudentServices.class
+models\Student.class
 models\Product.class
 dao\productDAOImpl.class
+dao\StudentDAOImpl.class
 dao\productServices.class
+dao\customerDAOImpl.class
+dao\customerServices.class
+models\customer.class

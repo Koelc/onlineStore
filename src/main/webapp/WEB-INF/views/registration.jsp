@@ -44,7 +44,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
 <div class = "container-fluid">
 <div class="navbar-header">
 <img src = "C:\Users\koel.chowdhury\DT TTT\Images\logos.png" class="img-responsive" alt="No image" width="104" height="136">
@@ -53,7 +53,7 @@
   <div>
   <ul class="nav navbar-nav">
      	
-  		<li> <a href="index">Home</a></li>
+  		<li> <a href="index"><p class="text-primary"><span class="glyphicon glyphicon-home">Home</span></p></a></li>
   		
   </ul> 
   </div>

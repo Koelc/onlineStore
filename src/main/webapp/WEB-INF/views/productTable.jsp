@@ -18,14 +18,14 @@
 </head>
 <body>
      
-     <nav class="navbar navbar-default">
+     <nav class="navbar navbar-inverse">
 <div class = "container-fluid">
 <div class="navbar-header">
 <img src = "C:\Users\koel.chowdhury\DT TTT\Images\logos.png" class="img-responsive" alt="No image" width="104" height="136">
     
   <ul class="nav navbar-nav">
      	
-  		<li> <a href="index">Home</a></li>
+  		<li> <a href="index"><span class="glyphicon glyphicon-home">Home</span></a></li>
   		
   </ul> 
   </div>
@@ -34,19 +34,7 @@
      <br>
      
      </div>
-<div class="container">
-  <div class="row">
-<div class = "col-lg-4">
-<img src="C:\Users\koel.chowdhury\DT TTT\Images\pizza.png"  height = "100" width = "100" alt="pizza" class="img-responsive">
-</div>
-<div class = "col-lg-4">
-<img src="C:\Users\koel.chowdhury\DT TTT\Images\chicken_wings.png"   height = "100" width = "100" alt="Chicken" class="img-responsive">
-</div>
-<div class = "col-lg-4">
-<img src="C:\Users\koel.chowdhury\DT TTT\Images\choco.png"   height = "100" width = "100" alt="choco" class="img-responsive">
-</div>
-</div>
-</div>
+
      <br>
      <c:url var="addAction" value="/productTable/add" ></c:url>
  
@@ -113,9 +101,19 @@
     </tr>
 </table>  
 </form:form>
+<div class = "container">
+
+    <form method="POST" action="uploadFile" enctype="multipart/form-data">
+        File to upload: <input type="file" name="file"><br /> 
+      <!--   Name: <input type="text" name="name"> --><br /> <br /> 
+        <input type="submit" value="Upload"> Press here to upload the file!
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+        
+    </form>
+    </div>
      
      <br>
-  <div class = "container">    
+  <div class = "table-responsive">    
 <table id="product" class="table table-striped" >
  
         <thead>  
@@ -135,8 +133,8 @@
        <td>${prod.name}</td>
        <td>${prod.price}</td>
        <td>${prod.category}</td>
-       <td><a href ="<c:url value= '/edit/${prod.id}'/>">Edit</td>
-       <td><a href ="<c:url value= '/remove/${prod.id}'/>">Delete</td>
+       <td><a href ="<c:url value= '/edit/${prod.id}'/>"/>Edit</td>
+       <td><a href ="<c:url value= '/remove/${prod.id}'/>"/>Delete</td>
      </tr>
     </c:forEach> 
           
@@ -149,6 +147,8 @@ $(document).ready(function(){
     $('#product').dataTable();
 });
 </script>
+
+
  <nav class="navbar navbar-inverse navbar-fixed-bottom">
 
 <h5><b><font color = "White">About</font> </b><span class="label label-default">Spreading cheesyness for decades</span></h5>

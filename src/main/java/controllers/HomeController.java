@@ -2,24 +2,38 @@ package controllers;
 
 import org.springframework.stereotype.Controller;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.gson.Gson;
+
+import dao.StudentServices;
 import dao.customerServices;
 import dao.productServices;
 import models.Product;
+import models.Student;
 import models.customer;
 
 //import dao.servicesImpl;
@@ -31,6 +45,8 @@ public class HomeController {
   public productServices productService;
     @Autowired
   public customerServices customerService; 
+    @Autowired
+	public StudentServices ss;
    /* @Qualifier(value="productService")
     public void setPersonService(productServices ps){
         this.productService = ps;
@@ -40,7 +56,26 @@ public class HomeController {
     {
     	return "index";
     }
+    @RequestMapping("/index")
+    public String showIndexNow()
+    {
+    	return "index";
+    }
     
+    
+    @RequestMapping("/table")
+	//@ResponseBody
+	public ModelAndView showHome()
+	{
+		List<Student> listtojsp=new ArrayList<Student>();
+		listtojsp= ss.listStudent();
+		String json = new Gson().toJson(listtojsp);  // converting list into Google Gson object which is a string
+		System.out.println(json);
+		ModelAndView mv=new ModelAndView("index");
+		mv.addObject("myJson", json);
+		return mv;
+	}
+
     
     @RequestMapping("/registration")
     public String showReg(Model model)
@@ -51,11 +86,18 @@ public class HomeController {
     
     //Customer data insert
     @RequestMapping(value= "/addCustomer", method = RequestMethod.POST)
-    public String addCustomer(@ModelAttribute("customer") customer c)
+    public String addCustomer(@Valid @ModelAttribute("customer") customer c, BindingResult result)
     {
     	
             //new person, add it
+    	if(result.hasErrors())
+    	{
+    		return "signin";
+    	}
+    	else
+    	{
             this.customerService.addPerson(c);
+    	}
         
     	return "redirect:/index";
     }
@@ -79,7 +121,7 @@ public class HomeController {
     }
     */
     
-    @RequestMapping("/productTableUser")
+    @RequestMapping(value = "/productTableUser", method=RequestMethod.GET )
     public ModelAndView prodTable()
 	{
 		//DAOlist dil=new DAOlist();
@@ -91,12 +133,7 @@ public class HomeController {
 		
   }
     
-    @RequestMapping("/index")
-    public String showHome()
-    {
-    	return "index";
-    }
-     
+   
     @RequestMapping("/signin")
 	public String signin()
 	{
@@ -148,6 +185,47 @@ public class HomeController {
 		return "productTable";
 	}*/
 	
+    
 	
+	
+	@RequestMapping(value = "/url", method = RequestMethod.POST)
+	public String addNewProduct(MultipartHttpServletRequest request, @RequestParam String h) {
+	        String category = request.getParameter("parmname");
+	        //other stuff 
+			return category;
+	}
+ 
+ 
+    @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
+   
+    String uploadFileHandler( @RequestParam("file") MultipartFile file) {
+ 
+        if (!file.isEmpty()) {
+            try {
+                byte[] bytes = file.getBytes();
+ 
+                // Creating the directory to store file
+                String rootPath = "C:/Users/koel.chowdhury/Pictures";
+                File dir = new File(rootPath + File.separator + "file");
+                if (!dir.exists())
+                    dir.mkdirs();
+ 
+                // Create the file on server
+                File serverFile = new File(dir.getAbsolutePath() + File.separator + "file"+".png");
+                BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));
+                stream.write(bytes);
+                stream.close();
+ 
+                /*logger.info("Server File Location="
+                        + serverFile.getAbsolutePath());*/
+ 
+                return "FileUploadSuccess" ;
+            } catch (Exception e) {
+                return "You failed to upload " ;
+            }
+        } else {
+            return "You failed to upload  because the file was empty.";
+        }
+    }	
      
 }

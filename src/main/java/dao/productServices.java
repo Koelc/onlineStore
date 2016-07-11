@@ -15,11 +15,11 @@ public class productServices {
      
 	@Autowired
     private productDAOImpl productDAO;
- 
+ /*
     public void setPersonDAO(productDAOImpl productDAO) {
         this.productDAO = productDAO;
     }
- 
+ */
    
     @Transactional
     public void addProduct(Product p) {

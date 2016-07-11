@@ -19,10 +19,10 @@ public class productDAOImpl  {
  
     @Autowired
     private SessionFactory sessionFactory;
-     
+ /*    
     public void setSessionFactory(SessionFactory sf){
         this.sessionFactory = sf;
-    }
+    }*/
  
   
     public void addProduct(Product p)

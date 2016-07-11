@@ -1,15 +1,8 @@
-<!DOCTYPE HTML >
-<HTML lang="en">
-<HEAD>
-<META name = "viewpoint" content = "width-device-width, intial-scale=1">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<!--  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">  </script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src = "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.1/css/font-awesome.min.css"></script>
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"  pageEncoding="ISO-8859-1"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+  <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ page session="false" %>
 
     <title>Be a Registered Customer - Enjoy super discounts</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,7 +44,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
 <div class = "container-fluid">
 <div class="navbar-header">
 <img src = "C:\Users\koel.chowdhury\DT TTT\Images\logos.png" class="img-responsive" alt="No image" width="104" height="136">
@@ -60,107 +53,72 @@
   <div>
   <ul class="nav navbar-nav">
      	
-  		<li> <a href="index">Home</a></li>
+  		<li> <a href="index"><p class="text-primary"><span class="glyphicon glyphicon-home">Home</span></p></a></li>
   		
   </ul> 
   </div>
   </div>
   </nav>
-	<div class="container">
-            <form class="form-horizontal" role="form">
-                <h2>Registration Form</h2>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3 control-label">Full Name</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus>
-                        <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="col-sm-3 control-label">Email</label>
-                    <div class="col-sm-9">
-                        <input type="email" id="email" placeholder="Email" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="col-sm-3 control-label">Password</label>
-                    <div class="col-sm-9">
-                        <input type="password" id="password" placeholder="Password" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
-                    <div class="col-sm-9">
-                        <input type="date" id="birthDate" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="country" class="col-sm-3 control-label">Country</label>
-                    <div class="col-sm-9">
-                        <select id="City" class="form-control">
-                            <option>Kolkata</option>
-                            <option>Mumbai</option>
-                            <option>Delhi/NCR</option>
-                            <option>Chennai</option>
-                            <option>Bengaluru</option>
-                            <option>Pune</option>
-                            <option>Gwahati</option>
-                            <option>Noida</option>
-                        </select>
-                    </div>
-                </div> <!-- /.form-group -->
-                <div class="form-group">
-                    <label class="control-label col-sm-3">Gender</label>
-                    <div class="col-sm-6">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <label class="radio-inline">
-                                    <input type="radio" id="femaleRadio" value="Female">Female
-                                </label>
-                            </div>
-                            <div class="col-sm-4">
-                                <label class="radio-inline">
-                                    <input type="radio" id="maleRadio" value="Male">Male
-                                </label>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div> <!-- /.form-group -->
-                <div class="form-group">
-                    <label class="control-label col-sm-3">Meal Preference</label>
-                    <div class="col-sm-9">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" id="calorieCheckbox" value="Low calorie">Low calorie
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" id="saltCheckbox" value="Low salt">Low salt
-                            </label>
-                        </div>
-                    </div>
-                </div> <!-- /.form-group -->
-                <div class="form-group">
-                    <div class="col-sm-9 col-sm-offset-3">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox">I accept <a href="#">terms</a>
-                            </label>
-                        </div>
-                    </div>
-                </div> <!-- /.form-group -->
-                <div class="form-group">
-                    <div class="col-sm-9 col-sm-offset-3">
-                        <button type="submit" class="btn btn-primary btn-block"  >Register</button>
-                      //  <a href = "Login">submit</a>
-                    </div>
-                </div>
-            </form> <!-- /form -->
-        </div> <!-- ./container -->
-	<script type="text/javascript">
-	
-	</script>
-</body>
+  <center>
+  <div style="color: teal; font-size: 30px">Customer |Registration Form</div>
+
+  <form:form action="addCustomer" modelAttribute="customer" method="post">
+   <table>
+    <tr>
+     <%-- <td>Id:</td>
+     <td>
+     <form:input path="id" />
+     </td>
+     <td style="color: red; font-style: italic;"><form:errors path="id" />
+     </td> --%>
+    </tr>
+    <tr>
+     <td>Name:</td>
+     <td><form:input path="name" />
+     </td>
+     <td style="color: red; font-style: italic;"><form:errors
+       path="name" />
+     </td>
+    </tr>
+       <tr>
+     <td>Email:</td>
+     <td><form:input path="email" />
+     </td>
+     <td style="color: red; font-style: italic;"><form:errors
+       path="email" />
+     </td>
+    </tr>
+    <tr>
+     <td>Phone:</td>
+     <td><form:input path="phone" />
+     </td>
+     <td style="color: red; font-style: italic;"><form:errors
+       path="phone" />
+     </td>
+    </tr>
+    <tr>
+     <td>Password:</td>
+     <td><form:password path="password" />
+     </td>
+     <td style="color: red; font-style: italic;"><form:errors
+       path="password" />
+     </td>
+    </tr>
+    <tr>
+     <td>Confirm Password:</td>
+     <td><form:password path="re_type" />
+     </td>
+     <td style="color: red; font-style: italic;"><form:errors
+       path="re_type" />
+     </td>
+    </tr>
+    
+     <tr>
+     <td></td>
+     <td><input type="submit" value="Save" />
+     </td>
+    </tr>
+     </table>
+  </form:form>
+    </body>
 </html>
